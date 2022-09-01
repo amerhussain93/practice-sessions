@@ -1,0 +1,60 @@
+
+				"""program practice"""
+print("-----------------------for create calender--------------------")
+import calendar
+year = int(input("enter the year :  "))
+month = int(input("enter the month : "))
+print( calendar.month(year,month))
+
+""" for whole year we use this program"""
+import calendar
+c= calendar.prcal(2023)
+print(c)
+
+print("===============pythagorean throrm====================")
+
+from math import sqrt
+print('assume the a, b,c are the three sides of the triangle  where c is the hypotenuse ')
+print("assume the a is base of triangle and b is the opposite side of triangle ")
+formula = input("which side you want to calculate ")
+if formula == "c":
+    a_side = int(input("enter base of the triangle "))
+    b_side = int(input("enter opposite side  of the triangle "))
+    c_side = sqrt(a_side*a_side+b_side*b_side)
+    print("the hypotenuse of triangle is : " , c_side)
+elif formula == "a":
+    b_side = int(input("enter opposite side of the triangle "))
+    c_side = int(input("enter the hypotenuse of the triangle "))
+    a_side = sqrt(c_side*c_side-b_side*b_side)
+    print("the base  of triangle is : " , a_side)
+elif formula =="b":
+    a_side = int(input("enter base of the triangle "))
+    c_side = int(input("enter the hypotenuse of the triangle "))
+    b_side = sqrt(c_side*c_side-a_side*a_side)
+    print("the opposite side  of triangle is : " , b_side)
+else:
+    print(" choose side of triangle a, b, c")
+
+print("================ the guessing the number ================")
+import random
+random_number = random.randrange(1,10)
+guess = int(input("enter number you choose"))
+correct = False
+print(random_number)
+while not correct:
+    if guess == random_number:
+        print("congrats you won")
+        correct = True
+    elif guess > random_number:
+        print("you chosen number is greater than selected number ")
+        break
+    elif guess < random_number:
+        print("you chosen number is lesser than selected number ")
+        break
+    elif guess > 10:
+        print("please choose the number in range of 1 to 10")
+    else:
+        print(" try the number in the range of 1 to 10")
+print("thanks for play")
+
+
